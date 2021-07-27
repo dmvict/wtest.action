@@ -1,0 +1,11 @@
+name: 'wretry.action'
+author : dmvict
+description: 'Retries an Github Action step on failure'
+inputs:
+  value:
+    description: 'A test value'
+    required: true
+    default: 0
+runs:
+  using: 'node12'
+  main: 'src/index.js'
