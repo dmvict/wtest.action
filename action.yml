@@ -8,4 +8,5 @@ inputs:
     default: 0
 runs:
   using: 'node12'
+  pre: 'src/pre.js'
   main: 'src/index.js'

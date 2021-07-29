@@ -2,7 +2,10 @@ const core = require( '@actions/core' );
 
 try
 {
-  debugger;
+  const preValue = Number( core.getInput( 'pre_value' ) );
+  if( preValue !== 5 )
+  throw Error( 'Unexpected {-pre_value-}' );
+
   const value = Number( core.getInput( 'value' ) );
   if( value < 3 )
   {
