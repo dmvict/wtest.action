@@ -1,6 +1,6 @@
-name: 'wretry.action'
-author : dmvict
-description: 'Retries an Github Action step on failure'
+name: 'test.action'
+author : dmvict <dm.vict.kr@gmail.com>
+description: 'An action for testing purpose, no real usage expected.'
 inputs:
   value:
     description: 'A test value'

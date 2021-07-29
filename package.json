@@ -1,10 +1,10 @@
 {
   "name": "test.action",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "An action for testing purpose, no real usage expected.",
   "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"No test specified\" && exit 0"
   },
   "repository": {
     "type": "git",
@@ -27,6 +27,6 @@
   },
   "homepage": "https://github.com/dmvict/test.action#readme",
   "dependencies": {
-    "@actions/core": "^1.1.0"
+    "@actions/core": "^1.4.0"
   }
 }
