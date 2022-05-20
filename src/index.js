@@ -2,21 +2,16 @@ const core = require( '@actions/core' );
 
 try
 {
-  const preValue = Number( core.getInput( 'pre_value' ) );
-  if( preValue !== 5 )
-  throw Error( 'Unexpected {-pre_value-}' );
+  const value = core.getInput( 'value' );
+  const boolDefault = core.getBooleanInput( 'bool_default' );
+  const bool = core.getBooleanInput( 'bool' );
 
-  const value = Number( core.getInput( 'value' ) );
-  if( value < 3 )
-  {
-    core.exportVariable( `INPUT_VALUE`, String( value + 1 ) );
-    throw new Error( 'Wrong attempt' );
-  }
-  else
-  {
-    core.exportVariable( `INPUT_MAIN_VALUE`, '6' );
-    console.log( 'Success' );
-  }
+  if( !value )
+  throw Error( 'Expected option {-value-}' );
+  if( boolDefault !== true )
+  throw Error( 'Expected default bool value {-bool_default-}' );
+  if( bool !== true && bool !== false )
+  throw Error( 'Unexpected bool value {-bool-}' );
 }
 catch( error )
 {

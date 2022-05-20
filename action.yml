@@ -5,9 +5,11 @@ inputs:
   value:
     description: 'A test value'
     required: true
-    default: 0
+  bool_default:
+    description: 'A boolean with default value'
+    default: 'true'
+  bool:
+    description: 'A boolean without default value'
 runs:
   using: 'node12'
-  pre: 'src/pre.js'
   main: 'src/index.js'
-  post: 'src/post.js'
