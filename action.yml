@@ -2,14 +2,21 @@ name: 'test.action'
 author : dmvict <dm.vict.kr@gmail.com>
 description: 'An action for testing purpose, no real usage expected.'
 inputs:
-  value:
-    description: 'A test value'
-    required: true
-  bool_default:
-    description: 'A boolean with default value'
-    default: 'true'
-  bool:
-    description: 'A boolean without default value'
+  environment:
+    description: 'An environment variable'
+    default: ${{ env.TEST }}
+  github_string:
+    description: 'A string value in github context'
+    default: ${{ github.retention_days }}
+  github_object:
+    description: 'A string from object in github context'
+    default: ${{ github.event.ref }}
+  exp_with_env:
+    description: 'Compare resolved context value with hardcoded value'
+    default: ${{ env.TEST == 'test' }}
+  exp_with_env_and_github:
+    description: 'Compare two different contexts'
+    default: ${{ env.TEST == github.retention_days }}
 runs:
   using: 'node12'
   main: 'src/index.js'
