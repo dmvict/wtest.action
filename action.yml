@@ -2,21 +2,15 @@ name: 'test.action'
 author : dmvict <dm.vict.kr@gmail.com>
 description: 'An action for testing purpose, no real usage expected.'
 inputs:
-  environment:
-    description: 'An environment variable'
-    default: ${{ env.TEST }}
-  github_string:
-    description: 'A string value in github context'
-    default: ${{ github.retention_days }}
-  github_object:
-    description: 'A string from object in github context'
-    default: ${{ github.event.ref }}
-  exp_with_env:
-    description: 'Compare resolved context value with hardcoded value'
-    default: ${{ env.TEST == 'test' }}
-  exp_with_env_and_github:
-    description: 'Compare two different contexts'
-    default: ${{ env.TEST == github.retention_days }}
+  status:
+    description: 'Job status'
+    default: ${{ job.status }}
+  container_network:
+    description: 'Job container network'
+    default: ${{ job.container.network }}
+  services_postgres_network:
+    description: 'Job service network'
+    default: ${{ job.services.postgres.network }}
 runs:
   using: 'node12'
   main: 'src/index.js'
