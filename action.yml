@@ -6,6 +6,14 @@ inputs:
     description: matrix.
     required: false
     default: ${{ toJSON(matrix) }}
+  job:
+    description: matrix.
+    required: false
+    default: ${{ toJSON(job) }}
+  github:
+    description: matrix.
+    required: false
+    default: ${{ toJSON(github) }}
 runs:
   using: 'node12'
   main: 'src/index.js'
