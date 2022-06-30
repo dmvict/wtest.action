@@ -2,9 +2,9 @@ const core = require( '@actions/core' );
 
 try
 {
-  const matrix = core.getInput( 'matrix' );
-  const parsed = JSON.parse( matrix );
-  console.log( matrix );
+  const job = core.getInput( 'job' );
+  const parsed = JSON.parse( job );
+  console.log( job );
   console.log( parsed );
 }
 catch( error )
