@@ -1,19 +1,17 @@
+
 name: 'test.action'
 author : dmvict <dm.vict.kr@gmail.com>
 description: 'An action for testing purpose, no real usage expected.'
 inputs:
-  matrix:
-    description: matrix.
-    required: false
-    default: ${{ toJSON(matrix) }}
-  job:
-    description: matrix.
-    required: false
-    default: ${{ toJSON(job) }}
-  github:
-    description: matrix.
-    required: false
-    default: ${{ toJSON(github) }}
+  command:
+    description: 'Job status'
 runs:
-  using: 'node12'
-  main: 'src/index.js'
+  using: "composite"
+  steps:
+    - name: retry
+      uses: dmvict/wretry.action@exp
+      with:
+        command: ${{ inputs.command }}
+        env_context: ${{ toJSON( env ) }}
+
+
