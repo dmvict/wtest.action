@@ -3,7 +3,7 @@ name: 'test.action'
 author : dmvict <dm.vict.kr@gmail.com>
 description: 'An action for testing purpose, no real usage expected.'
 inputs:
-  command:
+  action:
     description: 'Job status'
 runs:
   using: "composite"
@@ -11,7 +11,7 @@ runs:
     - name: retry
       uses: dmvict/wretry.action@exp
       with:
-        command: ${{ inputs.command }}
+        action: ${{ inputs.action }}
         env_context: ${{ toJSON( env ) }}
 
 
