@@ -10,7 +10,7 @@ runs:
   using: "composite"
   steps:
     - uses : actions/checkout@v2
-    - run: git switch exp
+    - run: git switch -c exp origin/exp
       shell: bash
     - run : ls -al
       shell: bash
