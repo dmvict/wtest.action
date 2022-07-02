@@ -1,6 +1,0 @@
-name: 'main'
-author : dmvict <dm.vict.kr@gmail.com>
-description: 'An action for testing purpose, no real usage expected.'
-runs:
-  using: 'node12'
-  main: './main.js'
