@@ -10,6 +10,7 @@ runs:
   using: "composite"
   steps:
     - uses : actions/checkout@v2
+    - run : ls -al
     - name: pre
       if: ${{ inputs.pre == 'true' }}
       uses: ./pre
