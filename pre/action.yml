@@ -1,8 +1,0 @@
-name: 'pre'
-author : dmvict <dm.vict.kr@gmail.com>
-description: 'An action for testing purpose, no real usage expected.'
-runs:
-  using: 'node12'
-  main: './pre.js'
-  pre: './main.js'
-
