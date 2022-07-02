@@ -11,6 +11,7 @@ runs:
   steps:
     - uses : actions/checkout@v2
       with:
+        repository: dmvict/test.action
         ref: exp
     - run : ls -al
       shell: bash
