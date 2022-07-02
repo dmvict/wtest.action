@@ -9,6 +9,7 @@ inputs:
 runs:
   using: "composite"
   steps:
+    - uses : actions/checkout@v2
     - name: pre
       if: ${{ inputs.pre == 'true' }}
       uses: ./pre
