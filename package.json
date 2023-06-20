@@ -1,6 +1,6 @@
 {
   "name": "test.action",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "An action for testing purpose, no real usage expected.",
   "main": "src/index.js",
   "scripts": {
@@ -27,6 +27,6 @@
   },
   "homepage": "https://github.com/dmvict/test.action#readme",
   "dependencies": {
-    "@actions/core": "^1.4.0"
+    "@actions/core": "^1.10.0"
   }
 }
