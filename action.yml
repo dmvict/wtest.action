@@ -4,9 +4,9 @@ description: 'An action for testing purpose, no real usage expected.'
 inputs:
   any:
     description: 'Multiline option'
-outputs:
-  test: # id of the output
-    description: 'The test output'
+# outputs:
+#   test: # id of the output
+#     description: 'The test output'
 runs:
   using: 'node16'
   main: 'src/index.js'
