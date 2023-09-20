@@ -8,5 +8,7 @@ inputs:
 #   test: # id of the output
 #     description: 'The test output'
 runs:
-  using: 'node16'
-  main: 'src/index.js'
+  using: composite
+  steps:
+  - run: echo OK
+    shell: bash
