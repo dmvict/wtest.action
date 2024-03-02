@@ -2,11 +2,12 @@ name: 'test.action'
 author : dmvict <dm.vict.kr@gmail.com>
 description: 'An action for testing purpose, no real usage expected.'
 inputs:
-  any:
+  singleline:
     description: 'Multiline option'
-# outputs:
-#   test: # id of the output
-#     description: 'The test output'
+  multiline:
+    description: 'Multiline option'
+  true_v:
+    description: 'Multiline option'
 runs:
-  using: 'node16'
+  using: 'node18'
   main: 'src/index.js'

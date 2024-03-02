@@ -2,7 +2,12 @@ const core = require( '@actions/core' );
 
 try
 {
-  core.setOutput( 'test', 'foo_bar_baz' );
+  let i = core.getInput( 'singleline' );
+  console.log( i );
+  let m = core.getMultilineInput( 'multiline' );
+  console.log( m );
+  let b = core.getBooleanInput( 'true_v' );
+  console.log( b );
 }
 catch( error )
 {
