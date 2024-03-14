@@ -1,11 +1,20 @@
-name: 'wretry.action'
+name: 'test.action'
 author : dmvict
-description: 'Retries an Github Action step on failure'
+description: 'Test docker actions'
 inputs:
-  value:
-    description: 'A test value'
+  string:
+    description: 'A string value'
     required: true
-    default: 0
+  bool-like:
+    description: 'A bool like value'
+    required: false
+    default: true
+outputs:
+  result:
+    description: 'Summary'
 runs:
-  using: 'node12'
-  main: 'src/index.js'
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.string }}
+    - ${{ inputs.bool-like }}
