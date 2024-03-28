@@ -10,6 +10,6 @@ runs:
   using: 'node20'
   main: 'src/index.js'
   pre: 'src/pre.js'
-  pre-if: success()
+  pre-if: env.TEST == false
   post: 'src/post.js'
-  post-if: success()
+  post-if: env.TEST == true
