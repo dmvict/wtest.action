@@ -12,4 +12,4 @@ runs:
   pre: 'src/pre.js'
   pre-if: env.TEST == 'false'
   post: 'src/post.js'
-  post-if: env.TEST == 'true'
+  post-if: job.status == 'failure'
