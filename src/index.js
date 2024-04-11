@@ -8,7 +8,8 @@ try
   // console.log( m );
   // let b = core.getBooleanInput( 'true_v' );
   // console.log( b );
-  core.setOutput('string', 'foo')
+  core.setOutput('string', 'foo');
+  throw Error( 'a default error' );
 }
 catch( error )
 {
