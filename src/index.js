@@ -2,12 +2,13 @@ const core = require( '@actions/core' );
 
 try
 {
-  let i = core.getInput( 'singleline' );
-  console.log( i );
-  let m = core.getMultilineInput( 'multiline' );
-  console.log( m );
-  let b = core.getBooleanInput( 'true_v' );
-  console.log( b );
+  // let i = core.getInput( 'singleline' );
+  // console.log( i );
+  // let m = core.getMultilineInput( 'multiline' );
+  // console.log( m );
+  // let b = core.getBooleanInput( 'true_v' );
+  // console.log( b );
+  core.setOutput('string', 'foo')
 }
 catch( error )
 {

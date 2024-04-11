@@ -8,6 +8,9 @@ inputs:
     description: 'Multiline option'
   true_v:
     description: 'Multiline option'
+outputs:
+  string:
+    description: 'Summary'
 runs:
-  using: 'node18'
+  using: 'node20'
   main: 'src/index.js'
