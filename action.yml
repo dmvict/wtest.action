@@ -10,12 +10,13 @@ inputs:
     required: false
     default: true
 outputs:
-  result:
+  string:
+    description: 'Summary'
+  bool-like:
     description: 'Summary'
 runs:
   using: 'docker'
   image: 'Dockerfile'
-  entrypoint: 'ls'
   pre-entrypoint: '/entrypoint.sh'
   pre-if: env.TEST == 'false'
   post-entrypoint: '/entrypoint.sh'
