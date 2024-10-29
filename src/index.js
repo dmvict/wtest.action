@@ -13,6 +13,10 @@ try
     core.exportVariable( `INPUT_MAIN_VALUE`, '6' );
     console.log( 'Success' );
   }
+
+  core.saveState('post_value', value);
+  core.saveState('value', value);
+  core.saveState('another', value);
 }
 catch( error )
 {
