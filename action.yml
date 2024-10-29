@@ -5,6 +5,9 @@ inputs:
   value:
     description: 'A test value'
     required: true
+  post_value:
+    description: 'A post test value'
+    required: false
 runs:
   using: 'node12'
   main: 'src/index.js'

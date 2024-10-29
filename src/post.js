@@ -2,9 +2,9 @@ const core = require( '@actions/core' );
 
 try
 {
-  const mainValue = Number( core.getInput( 'main_value' ) );
-  if( mainValue !== 6 )
-  throw new Error( 'Main script set no valid value {-main_value-}.' )
+  const value = Number( core.getInput( 'post_value' ) );
+  if( !value )
+  throw new Error( 'The post value {-post_value-} doesn\'t exist.' )
 }
 catch( error )
 {
