@@ -2,7 +2,6 @@ const core = require( '@actions/core' );
 
 try
 {
-  debugger;
   const value = Number( core.getInput( 'value' ) );
   if( value < 3 )
   {
